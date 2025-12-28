@@ -506,4 +506,52 @@ textarea{ resize: vertical; min-height: 120px; }
   .gallery{ grid-template-columns: 1fr; }
   .card-slider{ height: 200px; }
   .section{ padding: 44px 0; }
+
 }
+
+
+
+
+.cookie-banner{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1f2421;
+  color: #fff;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9999;
+  font-size: 14px;
+}
+
+.cookie-banner a{
+  color: #e6c07b;
+  text-decoration: underline;
+}
+
+.cookie-actions{
+  display: flex;
+  gap: 8px;
+}
+
+.cookie-actions button{
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#cookie-accept{
+  background: #e6c07b;
+}
+
+#cookie-decline{
+  background: #555;
+  color: #fff;
+}
+
