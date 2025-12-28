@@ -66,4 +66,38 @@ document.querySelectorAll(".card-slider").forEach((slider) => {
     const walk = (x - startX) * 1.0;
     slider.scrollLeft = scrollLeft - walk;
   }, { passive: true });
+
 });
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const banner = document.getElementById("cookie-banner");
+  const accept = document.getElementById("cookie-accept");
+  const decline = document.getElementById("cookie-decline");
+
+  if (!localStorage.getItem("cookieConsent")) {
+    banner.hidden = false;
+  }
+
+  accept.addEventListener("click", () => {
+    localStorage.setItem("cookieConsent", "accepted");
+    banner.hidden = true;
+  });
+
+  decline.addEventListener("click", () => {
+    localStorage.setItem("cookieConsent", "declined");
+    banner.hidden = true;
+  });
+});
+
+
+
+
+
+
+
