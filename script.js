@@ -72,16 +72,21 @@ document.querySelectorAll(".card-slider").forEach((slider) => {
 
 
 
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const banner = document.getElementById("cookie-banner");
   const accept = document.getElementById("cookie-accept");
   const decline = document.getElementById("cookie-decline");
 
-  if (!localStorage.getItem("cookieConsent")) {
+  // Ha ezen az oldalon nincs cookie banner, ne csináljon semmit
+  if (!banner || !accept || !decline) return;
+
+  const consent = localStorage.getItem("cookieConsent");
+
+  // csak akkor mutatjuk, ha még nincs választás
+  if (!consent) {
     banner.hidden = false;
+  } else {
+    banner.hidden = true;
   }
 
   accept.addEventListener("click", () => {
@@ -94,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     banner.hidden = true;
   });
 });
+
 
 
 
