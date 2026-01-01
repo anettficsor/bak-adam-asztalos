@@ -527,6 +527,7 @@ textarea{ resize: vertical; min-height: 120px; }
   justify-content: space-between;
   z-index: 9999;
   font-size: 14px;
+  pointer-events: auto;
 }
 
 .cookie-banner a{
@@ -559,3 +560,4 @@ textarea{ resize: vertical; min-height: 120px; }
 .cookie-banner[hidden]{
   display: none !important;
 }
+
