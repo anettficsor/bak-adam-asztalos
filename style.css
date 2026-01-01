@@ -555,3 +555,7 @@ textarea{ resize: vertical; min-height: 120px; }
   color: #fff;
 }
 
+
+.cookie-banner[hidden]{
+  display: none !important;
+}
